@@ -1,5 +1,5 @@
 import CustomIconType from '../@types/CustomIconType'
-import Svg, { G, Path } from 'react-native-svg'
+import Svg, { Path } from 'react-native-svg'
 
 const HouseIcon: React.FC<CustomIconType> = ({
   color,

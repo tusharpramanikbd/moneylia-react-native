@@ -23,6 +23,8 @@ const BottomNavigator = () => {
     <BottomTabs.Navigator
       screenOptions={{
         tabBarStyle: { height: 69, paddingBottom: 16, paddingTop: 8 },
+        headerStyle: { backgroundColor: '#7476ED' },
+        headerTintColor: 'white',
       }}
     >
       <BottomTabs.Screen
@@ -32,6 +34,7 @@ const BottomNavigator = () => {
           tabBarIcon: ({ size, color }) => (
             <HouseIcon color={color} size={size} />
           ),
+          headerShown: false,
         }}
       />
       <BottomTabs.Screen
@@ -68,7 +71,7 @@ const BottomNavigator = () => {
 export default function App() {
   return (
     <>
-      <StatusBar style='dark' />
+      <StatusBar style='light' />
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
