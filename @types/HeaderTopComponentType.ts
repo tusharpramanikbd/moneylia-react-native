@@ -1,0 +1,3 @@
+type HeaderTopComponentType = {
+  bgColor: string
+}

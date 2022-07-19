@@ -53,6 +53,7 @@ const BottomNavigator = () => {
           tabBarIcon: ({ size, color }) => (
             <PagoPAIcon color={color} size={size} />
           ),
+          headerShown: false,
         }}
       />
       <BottomTabs.Screen
