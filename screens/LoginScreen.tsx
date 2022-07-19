@@ -1,7 +1,15 @@
 import { Button, Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import type { NativeStackScreenProps } from '@react-navigation/native-stack'
+import RootStackParamList from '../@types/RootStackPramList'
 
-const LoginScreen = () => {
+type Props = NativeStackScreenProps<RootStackParamList, 'Login'>
+
+const LoginScreen = ({ navigation }: Props) => {
+  const loginOnPressHandler = () => {
+    navigation.navigate('BottomTabs')
+  }
+
   return (
     <View style={styles.container}>
       <Image
@@ -14,7 +22,10 @@ const LoginScreen = () => {
         erat a sit.
       </Text>
       <View style={styles.buttonStyle}>
-        <Pressable android_ripple={{ color: '#dddddd' }}>
+        <Pressable
+          android_ripple={{ color: '#dddddd' }}
+          onPress={loginOnPressHandler}
+        >
           <Text style={styles.buttonText}>Join for free</Text>
         </Pressable>
       </View>
