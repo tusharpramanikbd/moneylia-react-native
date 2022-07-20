@@ -28,7 +28,7 @@ const PaymentDetailsScreen = ({ navigation, route }: Props) => {
         <View style={styles.titleViewStyle}>
           <Text style={styles.titleTextStyle}>Payment notice</Text>
           <View style={styles.imageViewStyle}>
-            <PagoPAIcon size={'40'} color={'#BF7EE6'} />
+            <PagoPAIcon size={'32'} color={'#BF7EE6'} />
           </View>
         </View>
         <View style={styles.dataViewStyle}>
@@ -51,7 +51,7 @@ const PaymentDetailsScreen = ({ navigation, route }: Props) => {
           <Text style={styles.titleStyle}>Creditor tax code</Text>
           <Text style={styles.valueStyle}>{transaction?.creditorTaxCode}</Text>
         </View>
-        <View style={styles.dataViewStyle}>
+        <View style={[styles.dataViewStyle, styles.nodivider]}>
           <Text style={styles.titleStyle}>Notice code</Text>
           <Text style={styles.valueStyle}>{transaction?.noticeCode}</Text>
         </View>
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
     color: '#3A3B7B',
   },
   imageViewStyle: {
-    width: 56,
-    height: 56,
+    width: 40,
+    height: 40,
     borderRadius: 4,
     backgroundColor: '#0066CC1A',
     justifyContent: 'center',
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   dataViewStyle: {
     marginTop: 16,
     marginHorizontal: 16,
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     borderColor: '#EAEAEC',
     paddingBottom: 16,
   },
@@ -154,5 +154,8 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     fontWeight: 'bold',
     fontSize: 18,
+  },
+  nodivider: {
+    borderBottomWidth: 0,
   },
 })
