@@ -14,6 +14,7 @@ import HouseIcon from './icons/HouseIcon'
 import FileIcon from './icons/FileIcon'
 import PagoPAIcon from './icons/PagoPAIcon'
 import UserIcon from './icons/UserIcon'
+import PaymentDetailsScreen from './screens/PaymentDetailsScreen'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 const BottomTabs = createBottomTabNavigator<BottomTabsParamList>()
@@ -85,6 +86,13 @@ export default function App() {
           <Stack.Screen
             name='BottomTabs'
             component={BottomNavigator}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name='PaymentDetails'
+            component={PaymentDetailsScreen}
             options={{
               headerShown: false,
             }}
